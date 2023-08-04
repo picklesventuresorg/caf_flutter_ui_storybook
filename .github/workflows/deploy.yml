@@ -16,8 +16,13 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'
+      - name: Configure git for private package
+        run: git config --global url."git@github.com:".insteadOf "https://github.com/"
+
       - name: 'Run flutter pub get'
         run: flutter pub get
+      - name: 'Run flutter build'
+        run: flutter pub run build_runner build --delete-conflicting-outputs
       - name: 'Build flutter web'
         run: flutter build web --release
       - name: deploy

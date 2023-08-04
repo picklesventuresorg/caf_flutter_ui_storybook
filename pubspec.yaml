@@ -32,10 +32,10 @@ dependencies:
     sdk: flutter
   widgetbook: 3.0.0
   widgetbook_annotation: ^3.0.0
-  # caf_flutter_ui:
-  #   git:
-  #     url: "git@github.com:picklesventuresorg/caf_flutter_ui.git"
-  #     ref: develop
+  caf_flutter_ui:
+    git:
+      url: "git@github.com:picklesventuresorg/caf_flutter_ui.git"
+      ref: develop
 
 
 
