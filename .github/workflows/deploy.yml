@@ -2,7 +2,7 @@ name: Deploy To Github page
 on:
   push:
     branches:
-      - task/soethan_action_deploy_test
+      - main
 
 jobs:
   build:
