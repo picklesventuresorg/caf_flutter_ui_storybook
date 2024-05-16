@@ -20,15 +20,17 @@ Widget defaultAppBadge(BuildContext context) {
         .color(label: 'Border color', initialValue: AppColors.transparent),
     backgroundColor: context.knobs
         .color(label: 'Background color', initialValue: AppColors.white),
-    textColor: context.knobs
-        .color(label: 'Text color', initialValue: AppColors.kcPrimaryColor),
+
+    /// TODO: Fix textColor
+    // textColor: context.knobs
+    //     .color(label: 'Text color', initialValue: AppColors.kcPrimaryColor),
   ));
 }
 
 @widgetbook.UseCase(name: 'Disable AppBadge', type: AppBadge)
 Widget disableAppBadge(BuildContext context) {
   return SafeAreaWrapper(
-    child: AppBadge.disable(
+    child: AppBadge(
       label: 'Disable',
       borderRadius: context.knobs.double.slider(
           label: 'Border Radius',

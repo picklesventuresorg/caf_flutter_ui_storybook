@@ -11,8 +11,11 @@ Widget linearAppIndicator(BuildContext context) {
       type: AppIndicatorType.linear,
       backgroundColor: context.knobs
           .color(label: 'BackgroundColor', initialValue: AppColors.grey40),
-      progressColor: context.knobs.color(
-          label: 'Progress Color', initialValue: AppColors.kcPrimaryColor),
+
+      /// TODO: Fix backgroundColor
+
+      // progressColor: context.knobs.color(
+      //     label: 'Progress Color', initialValue: AppColors.kcPrimaryColor),
     ),
   );
 }
@@ -22,8 +25,11 @@ Widget circularAppIndicator(BuildContext context) {
   return SafeAreaWrapper(
     child: AppIndicator(
       type: AppIndicatorType.circular,
-      progressColor: context.knobs.color(
-          label: 'Progress Color', initialValue: AppColors.kcPrimaryColor),
+
+      /// TODO: Fix backgroundColor
+
+      // progressColor: context.knobs.color(
+      //     label: 'Progress Color', initialValue: AppColors.kcPrimaryColor),
     ),
   );
 }

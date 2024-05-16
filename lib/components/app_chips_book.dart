@@ -12,8 +12,8 @@ final List<ChipModel> _inputData = [
 
 @widgetbook.UseCase(name: 'FilterChip', type: AppChips)
 AppChips filterChip(BuildContext context) {
-  return AppChips(
-    type: AppChipType.filter,
+  
+  return AppChips.filter(
     chipList: _data,
     onFilterChanged: (value) {},
     isSelectable: context.knobs.boolean(label: 'Is selectable'),
@@ -26,8 +26,8 @@ AppChips filterChip(BuildContext context) {
 
 @widgetbook.UseCase(name: 'ActionChip', type: AppChips)
 AppChips actionChip(BuildContext context) {
-  return AppChips(
-    type: AppChipType.action,
+  return AppChips.action(
+    // type: AppChipType.action,
     avatar: const CircleAvatar(
         backgroundColor: AppColors.yellow100, child: Icon(Icons.star_rounded)),
     chipList: _data,
@@ -37,8 +37,8 @@ AppChips actionChip(BuildContext context) {
 
 @widgetbook.UseCase(name: 'Input Chip', type: AppChips)
 AppChips inputChip(BuildContext context) {
-  return AppChips(
-    type: AppChipType.input,
+  return AppChips.input(
+    // type: AppChipType.input,
     inputList: _inputData,
     isSelectable: context.knobs.boolean(label: 'Is selectable'),
     onSelected: (_){},
@@ -48,7 +48,7 @@ AppChips inputChip(BuildContext context) {
 
 @widgetbook.UseCase(name: 'Choice Chip', type: AppChips)
 AppChips choiceChips(BuildContext context) {
-  return AppChips(
+  return AppChips.choice(
     selectedIndex: 2,
     selectedLabelColor: context.knobs
         .color(label: 'Selected Label color', initialValue: AppColors.white),
@@ -66,7 +66,6 @@ AppChips choiceChips(BuildContext context) {
         .color(label: 'Border color', initialValue: AppColors.red100),
     selectBorderColor: context.knobs
         .color(label: 'Selected border color', initialValue: AppColors.black),
-    type: AppChipType.choice,
     chipList: _data,
     onSelected: (value) {},
   );

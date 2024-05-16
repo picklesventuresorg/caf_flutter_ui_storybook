@@ -13,8 +13,10 @@ Widget defaultAppStatus(BuildContext context) {
           label: 'Radius', min: 1, max: 24, initialValue: 1, divisions: 23),
       textColor: context.knobs
           .color(label: 'Text Color', initialValue: AppColors.white),
-      backgroundColor: context.knobs.color(
-          label: 'Background Color', initialValue: AppColors.kcPrimaryColor),
+
+      /// TODO: Fix backgroundColor
+      // backgroundColor: context.knobs.color(
+      //     label: 'Background Color', initialValue: AppColors.kcPrimaryColor),
       tagSize: context.knobs.list(label: 'Status Size', options: [
         AppStatusSize.small,
         AppStatusSize.regular,
@@ -31,7 +33,9 @@ Widget successAppStatus(BuildContext context) {
       'Success ',
       radiusBorder: context.knobs.double.slider(
           label: 'Radius', min: 1, max: 24, initialValue: 1, divisions: 23),
-      backgroundColor: AppColors.green,
+
+      /// TODO : Fix backgroundColor
+      // backgroundColor: AppColors.green,
       tagSize: context.knobs.list(label: 'Status Size', options: [
         AppStatusSize.small,
         AppStatusSize.regular,

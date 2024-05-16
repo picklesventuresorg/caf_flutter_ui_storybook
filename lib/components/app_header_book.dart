@@ -14,8 +14,9 @@ Widget defaultAppHeader(BuildContext context) {
       child: AppHeader(
           headerHeight: kToolbarHeight,
           title: "Default",
-          backgroundColor: context.knobs.color(
-              label: 'AppBar Color', initialValue: AppColors.kcPrimaryColor),
+          /// TODO: Fix backgroundColor
+          // backgroundColor: context.knobs.color(
+          //     label: 'AppBar Color', initialValue: AppColors.kcPrimaryColor),
           iconColor: context.knobs
               .color(label: 'Leading Color', initialValue: AppColors.white),
           isCenterTitle: context.knobs.boolean(label: 'Center Title'),
@@ -36,8 +37,9 @@ Widget appbarWithMenu(BuildContext context) {
       size: const Size.fromHeight(kToolbarHeight),
       child: AppHeader(
         title: "Checkout Inspection",
-        backgroundColor: context.knobs.color(
-            label: 'AppBar Color', initialValue: AppColors.kcPrimaryColor),
+        /// TODO: Fix backgroundColor
+        // backgroundColor: context.knobs.color(
+        //     label: 'AppBar Color', initialValue: AppColors.kcPrimaryColor),
         iconColor: context.knobs
             .color(label: 'Leading Color', initialValue: AppColors.white),
         isCenterTitle: context.knobs.boolean(label: 'Center Title'),

@@ -40,7 +40,8 @@ Widget defaultCardView(BuildContext context) {
 @widgetbook.UseCase(name: 'outline cardview', type: AppCard)
 Widget outlineCardView(BuildContext context) {
   return SafeAreaWrapper(
-    child: AppCard.outline(
+    child: AppCard(
+      
       contentPadding: const AppPaddingData.big(),
       elevation: context.knobs.double.slider(
           label: 'Elevation',
@@ -48,7 +49,8 @@ Widget outlineCardView(BuildContext context) {
           initialValue: 0,
           min: 0,
           divisions: 100.toInt()),
-      borderSide: const BorderSide(color: AppColors.kcAccentColor, width: 2),
+          /// TODO: Fix borderColor
+      //borderSide: const BorderSide(color: AppColors.kcAccentColor, width: 2),
       child: const Text('Default App Card'),
     ),
   );

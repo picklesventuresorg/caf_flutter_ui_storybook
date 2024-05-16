@@ -9,7 +9,7 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 )
 Widget squareIconButton(BuildContext context) {
   return SafeAreaWrapper(
-    child: AppIconButton.square(
+    child: AppIconButton.filledSquare(
         onTap: () {},
         icon: Icons.add,
         radius: context.knobs.double.slider(
@@ -25,7 +25,7 @@ Widget squareIconButton(BuildContext context) {
 )
 Widget circleIconButton(BuildContext context) {
   return SafeAreaWrapper(
-    child: AppIconButton.circle(
+    child: AppIconButton.filledCircle(
         onTap: () {},
         icon: Icons.add,
         iconSize: context.knobs.double.slider(

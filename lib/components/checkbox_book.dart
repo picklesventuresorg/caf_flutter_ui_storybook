@@ -38,12 +38,17 @@ Widget checkboxColor(BuildContext context) {
         label: "CheckBox",
         isDisable: context.knobs.boolean(label: 'disable', initialValue: true),
         value: context.knobs.boolean(label: 'select', initialValue: true),
-        borderColor: context.knobs.color(
-            label: 'border color', initialValue: AppColors.kcPrimaryColor),
+
+        /// TODO : Fix borderColor
+        // borderColor: context.knobs.color(
+        //     label: 'border color', initialValue: AppColors.kcPrimaryColor),
         uncheckedFillColor: context.knobs.color(
             label: 'UnChecked Fill color', initialValue: AppColors.white),
-        checkedFillColor: context.knobs.color(
-            label: 'Checked Fillcolor', initialValue: AppColors.kcPrimaryColor),
+
+        /// TODO : Fix borderColor
+
+        // checkedFillColor: context.knobs.color(
+        //     label: 'Checked Fillcolor', initialValue: AppColors.kcPrimaryColor),
         checkedIconColor: context.knobs
             .color(label: 'Checked Icon color', initialValue: AppColors.white),
         uncheckedIconColor: context.knobs.color(

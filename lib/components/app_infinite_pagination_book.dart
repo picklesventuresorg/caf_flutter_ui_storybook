@@ -1,4 +1,6 @@
 import 'package:caf_flutter_ui/caf_flutter_ui.dart';
+import 'package:caf_flutter_ui/custom_widget/infinite_pagination.dart';
+import 'package:caf_flutter_ui/custom_widget/infinite_pagination/app_infinite_list_pagination.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 final AppPagingController<int, String> pagingController = AppPagingController(
@@ -10,12 +12,12 @@ final AppPagingController<int, String> errorPagingController =
   initialPageKey: 1,
 );
 
-@widgetbook.UseCase(name: 'Default', type: AppInfinitePagination)
-defaultAppInfinitePagination(BuildContext context) {
+@widgetbook.UseCase(name: 'Default', type: AppInfiniteListPagination)
+Widget defaultAppInfinitePagination(BuildContext context) {
   WidgetsBinding.instance.addPostFrameCallback((_) {
     pagingController.appendPage(items.sublist(0, (items.length / 3).ceil()), 2);
   });
-  return AppInfinitePagination<int, String>(
+  return AppInfiniteListPagination<int, String>(
       pageController: pagingController,
       shrinkWrap: true,
       firstPageProgressIndicatorBuilder: (context) {
@@ -33,14 +35,14 @@ defaultAppInfinitePagination(BuildContext context) {
       });
 }
 
-@widgetbook.UseCase(name: 'Error', type: AppInfinitePagination)
-errorAppInfinitePagination(BuildContext context) {
+@widgetbook.UseCase(name: 'Error', type: AppInfiniteListPagination)
+Widget errorAppInfinitePagination(BuildContext context) {
   WidgetsBinding.instance.addPostFrameCallback((_) {
     errorPagingController.appendPage(
         items.sublist(0, (items.length / 3).ceil()), 2);
     errorPagingController.error = Exception('Pagination Error');
   });
-  return AppInfinitePagination<int, String>(
+  return AppInfiniteListPagination<int, String>(
       pageController: errorPagingController,
       shrinkWrap: true,
       firstPageProgressIndicatorBuilder: (context) {
